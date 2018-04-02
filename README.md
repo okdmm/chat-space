@@ -12,9 +12,9 @@
 
 ### Association
 
--has_many :messages
--has_many :group_users
--has_many :groups, through: :group_users
+- has_many :messages
+- has_many :group_users
+- has_many :groups, through: :group_users
 
 ## groups
 
@@ -33,7 +33,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
-|group_id|ejhnull: false, foreign_key: true|
+|group_id|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -48,7 +48,7 @@
 |image|string||
 |user_id|references|null: false,foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
-|posted_at|datetime||
+|posted_at|datetime|null: false|
 ### Association
 - belongs_to :group
 - belongs_to :user
