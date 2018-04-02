@@ -7,7 +7,7 @@
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
 |mail|string|null: false, foreign_key: true|
-|name|stinrg|------|
+|name|stinrg|null: false|
 
 
 ### Association
@@ -21,7 +21,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
-|group_name|string|-------|
+|group_name|string|null: false|
 ### Association
 
 - has_many :users, through: :group_users
@@ -46,9 +46,9 @@
 |------|----|-------|
 |body|test|null: false|
 |image|string||
-|user_id|references|foreign_key: true|
-|group_id|references|foreign_key: true|
-|posted_at|datime||
+|user_id|references|null: false,foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+|posted_at|datetime||
 ### Association
 - belongs_to :group
 - belongs_to :user
