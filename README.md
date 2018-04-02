@@ -19,7 +19,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, index: true|
+|group_name|string|null: false|
 ### Association
 
 - has_many :users, through: :group_users
