@@ -5,8 +5,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|mail|string|null: false, foreign_key: true|
-|name|stinrg|null: false|
+|mail|string|null: false, unique: true|
+|name|string|null: false, index: true|
 
 
 ### Association
@@ -31,7 +31,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
-|group_id|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
