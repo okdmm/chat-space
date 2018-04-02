@@ -5,7 +5,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
 |mail|string|null: false, foreign_key: true|
 |name|stinrg|null: false|
 
@@ -20,7 +19,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
 |group_name|string|null: false|
 ### Association
 
@@ -44,7 +42,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|test|null: false|
+|body|text||
 |image|string||
 |user_id|references|null: false,foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
