@@ -1,0 +1,47 @@
+!!!
+%html
+  %body
+    .message-contents
+      .chat-side
+        .chat-side__user
+          .chat-side__user-content
+            .chat-side__user-name
+              okada
+            = link_to  class: "chat-side__user--new-group" do
+              %i.fa.fa-pencil-square-o
+            = link_to class: " chat-side__user--edit-user"  do
+              %i.fa.fa-cog
+
+        .chat-side__groups
+          .chat-side__group
+            .chat-side__group-list
+              .chat-side__group-name
+                sample 
+              .chat-side__group-message
+                sample sample
+
+      .chat-main
+        .chat-main__header
+          .chat-main__header--group
+            .chat-main__header--group-name
+              sample
+          .chat-main__header--members 
+            okada
+
+        .chat-main__body
+          .chat-main__body--messages-list
+            .chat-main__message
+              .chat-main__message-name
+                okada
+              .chat-main__message-time
+                2018/04/03 20:17:51
+              .chat-main__message-body
+                sample sample
+        .chat-main_footer
+          .chat-main__footer-form
+            .chat-main__footer-body
+              %input{:placeholder => "type a message", :class => "message"}
+              %label.chat-file{for: ""}
+                =link_to do
+                  %i.fa.fa-picture-o
+              %input{ :type => "submit", :value => "Send", :class => "submit"}
