@@ -49,7 +49,7 @@
         &-name{
           font-size: 16px;
           font-weight: bold;
-          color: #434A54;
+          color: $text-color;
           float: left;
         }
         &-time{
@@ -80,7 +80,7 @@
           padding: 15px 10px;
           margin: 20px 0;
           border: none;
-          color: #434A54;
+          color: $text-color;
         }
         .chat-file{
           height: 50px;
@@ -97,11 +97,11 @@
       }
     }
     .submit{
-      color: #fff;
+      color: $bg-font-color;
       width: 100px;
       height: 50px;
       text-align: center;
-      background-color: #38AEF0;
+      background-color: $bg-color;
       margin: 20px 0;
       position: absolute;
       top: 0;
