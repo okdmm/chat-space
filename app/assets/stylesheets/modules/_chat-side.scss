@@ -1,13 +1,13 @@
-.chat-side{
+.chat-side {
   float: left;
   width: 300px;
   height: 100vh;
-  &__user{
+  &__user {
     height: 15%;
     min-height: 100px;
     background-color: #253141;
     position: relative;
-    &-content{
+    &-content {
       height: 50px;
       width: 100%;
       line-height: 50px;
@@ -16,41 +16,41 @@
       top: 0;
       bottom: 0;
       color: $bg-font-color;
-      &--name{
+      &--name {
         font-size: 16px;
         font-weight: bold;
         margin: 0 20px;
         display: inline-block;
         position: relative;
       }
-      &--new-group{
+      &--new-group {
         margin: 0 0 0 90px;
         display: inline-block;
-        i{
+        i {
           color:$bg-font-color;
         }
       }
-      &--edit-user{
+      &--edit-user {
         display: inline-block;
-        i{
+        i {
           color:$bg-font-color;
         }
       }
     }
   }
-  &__groups{
+  &__groups {
     height: 85%;
     background-color: #2f3e51;
     clear: both;
-    .chat-side__group-list{
+    .chat-side__group-list {
         height: 100%;
         color: #FFFFFF;
-      .chat-side__group{
+      .chat-side__group {
         padding: 20px;
         .chat-side__group-name {
           font-size: 15px;
         }
-        .chat-side__group-message{
+        .chat-side__group-message {
           font-size: 11px;
         }
       }
