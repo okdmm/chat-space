@@ -7,29 +7,32 @@
       .chat-side
         .chat-side__user
           .chat-side__user-content
-            .chat-side__user-name
+            .chat-side__user-content--name
               okada
-            = link_to  class: "chat-side__user--new-group" do
-              %i.fa.fa-pencil-square-o
-            = link_to class: " chat-side__user--edit-user"  do
-              %i.fa.fa-cog
-
+            .chat-side__user-content--new-group
+              = link_to   do
+                %i.fa.fa-edit
+            .chat-side__user-content--edit-user
+              = link_to   do
+                %i.fa.fa-cog
         .chat-side__groups
-          .chat-side__group
-            .chat-side__group-list
+          .chat-side__group-list
+            .chat-side__group
               .chat-side__group-name
                 sample 
               .chat-side__group-message
                 sample sample
-
       .chat-main
         .chat-main__header
           .chat-main__header--group
             .chat-main__header--group-name
               sample
+            .chat-main__header--group-edit-btn
+              = link_to do
+                edit
           .chat-main__header--members 
-            okada
-
+            Member:
+            %i okada
         .chat-main__body
           .chat-main__body--messages-list
             .chat-main__message
