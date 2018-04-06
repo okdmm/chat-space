@@ -4,8 +4,10 @@ html body {
 }
 
 @import "./reset";
-@import "./config/variable";
+@import "config/variable";
+@import "mixin/clearfix";
 @import "./modules/chat-side";
 @import "./modules/chat-main";
 @import "./modules/notification";
 @import "font-awesome";
+
