@@ -1,4 +1,4 @@
-.chat-side {
+.side-bar {
   float: left;
   width: 300px;
   height: 100vh;
@@ -24,7 +24,7 @@
         position: relative;
       }
       &--new-group {
-        margin: 0 0 0 90px;
+        margin: 0 0 0 150px;
         display: inline-block;
         i {
           color:$bg-font-color;
@@ -42,15 +42,15 @@
     height: 85%;
     background-color: #2f3e51;
     clear: both;
-    .chat-side__group-list {
+    .side-bar__group-list {
         height: 100%;
         color: #FFFFFF;
-      .chat-side__group {
+      .side-bar__group {
         padding: 20px;
-        .chat-side__group-name {
+        .side-bar__group-name {
           font-size: 15px;
         }
-        .chat-side__group-message {
+        .side-bar__group-message {
           font-size: 11px;
         }
       }
