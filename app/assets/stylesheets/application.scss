@@ -1,0 +1,13 @@
+html body {
+  height: 100vh;
+  width: 100%;
+}
+
+@import "./reset";
+@import "config/variable";
+@import "mixin/clearfix";
+@import "./modules/chat-side";
+@import "./modules/chat-main";
+@import "./modules/notification";
+@import "font-awesome";
+
