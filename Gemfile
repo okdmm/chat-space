@@ -57,3 +57,6 @@ gem 'haml-rails'
 gem 'erb2haml'
 # font-awsome
 gem 'font-awesome-rails'
+
+# dives-gem
+gem 'devise'
