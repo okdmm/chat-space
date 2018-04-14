@@ -1,5 +1,7 @@
-.side-bar__group
-  .side-bar__group-name
-    sample 
-  .side-bar__group-message
-    sample sample
+-current_user.groups.each do |group|
+  .side-bar__group
+    = link_to group_messages_path(group) do
+      .side-bar__group-name
+        = group.name
+      .side-bar__group-message
+        メッセージなし

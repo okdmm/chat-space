@@ -46,11 +46,15 @@
         height: 100%;
         color: #FFFFFF;
       .side-bar__group {
+        text-decoration: none;
         padding: 20px;
+        margin-bottom: 20px;
         .side-bar__group-name {
+          color: #FFFFFF;
           font-size: 15px;
         }
         .side-bar__group-message {
+          color: #FFFFFF;
           font-size: 11px;
         }
       }
