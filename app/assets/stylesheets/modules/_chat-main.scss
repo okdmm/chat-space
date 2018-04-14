@@ -91,10 +91,13 @@
             text-rendering: auto;
             color: black;
           }
+          .hidden {
+            display: none;
+          }
         }
       }
     }
-    .submit {
+    .form__submit {
       color: $bg-font-color;
       width: 100px;
       height: 50px;
