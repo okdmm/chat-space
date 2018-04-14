@@ -29,9 +29,11 @@
         = render partial: "chat"
     .chat-main__footer
       .chat-main__footer-form
-        .chat-main__footer-form-body
-          %input{placeholder:  "type a message", class: "message", type: "text"}
-          %label.chat-file{for: ""}
-            =link_to do
-              %i.fa.fa-picture-o
-        %input{ type: "submit", value: "Send", class:  "submit"}
+        = form_for [@group, @message] do |f|
+          .chat-main__footer-form-body
+            = f.text_field :content, class: 'message', placeholder: 'type a message'
+            .chat-files
+              = f.label :image, class: 'chat-file' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'
