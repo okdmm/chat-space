@@ -4,6 +4,8 @@ class GroupsController < ApplicationController
   end
 
   def new
+    @group = Group.new
+    @group.users << current_user
   end
   
   def create
@@ -11,7 +13,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: "グループが作成されました。"
     else
-      render: nwe
+      render :new
     end
   end
 
@@ -20,5 +22,6 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, {user_ids: []})
+    params.require(:group).permit(:name, { :user_ids =>  []})
+  end
 end
