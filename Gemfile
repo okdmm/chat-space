@@ -60,3 +60,7 @@ gem 'font-awesome-rails'
 
 # dives-gem
 gem 'devise'
+
+# image-file-apploading tool
+gem 'carrierwave'
+gem 'mini_magick'
