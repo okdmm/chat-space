@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(message){
     var img = '';
-    if (message.image){
-    img = '<img src="${message.image}">'
+    if (message.image.url){
+    img = `<img class="message_image" src="${ message.image.url }" >`
     }
     var html = `<div class="chat-main__message">
                   <div class="chat-main__message-name">
@@ -13,15 +13,13 @@ $(function(){
                   </div>
                   <div class="chat-main__message-body">
                     ${ message.content }
-                  <img class='message_image'>
                     ${img}
-                  </img>
                   </div>
                 </div>`
     return html; 
   }
 
-  $('#new_message').on('submit', function(e){
+  $('#new_message').submit(function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -37,6 +35,9 @@ $(function(){
       var html = buildHTML(data);
       $('.chat-main__body--messages-list').append(html)
       $('#message_content').val('')
+      $('#message_image').val('')
+      $('.form__submit').prop('disabled',false)
+      $('.chat-main__body').animate({ scrollTop:$('.chat-main__message').last().offset().top + "98px"})
     })
     .fail(function(){
       alert('メッセージを入力してください');
