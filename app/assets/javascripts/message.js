@@ -1,4 +1,13 @@
 $(function(){
+  function flushMessage(){
+    var html = `<p class="notice">メッセージを送信しました。</p>`
+    $('.notification').append(html)
+    $('.notice').fadeIn(200).fadeOut(2000)
+    setTimeout(function(){
+      $('.notice').remove()
+    },2000)
+  }
+
   function buildHTML(message){
     var img = '';
     if (message.image.url){
@@ -34,6 +43,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.chat-main__body--messages-list').append(html)
+      flushMessage()
       $('#message_content').val('')
       $('#message_image').val('')
       $('.form__submit').prop('disabled',false)
