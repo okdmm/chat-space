@@ -28,11 +28,10 @@
             = user.name
     .chat-main__body
       .chat-main__body--messages-list
-        = render partial: "message" ,collection: @messages
-      #chat-scroll
+        = render  @messages
     .chat-main__footer
       .chat-main__footer-form
-        = form_for [@group, @message],id:'new_message' do |f|
+        = form_for [@group, @message] do |f|
           .chat-main__footer-form-body
             = f.text_field :content, class: 'message', placeholder: 'type a message'
             .chat-files
