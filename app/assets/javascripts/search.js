@@ -56,4 +56,7 @@ $(function(){
     appendGroupUser(user_name, user_id)
     $(this).parent().remove()
   })
+  $('#chat-group-form__users').on('click', '.js-remove-btn',function() {
+    $(this).parent().remove()
+  })
 })
