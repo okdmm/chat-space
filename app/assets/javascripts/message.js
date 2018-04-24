@@ -2,7 +2,7 @@ $(function(){
   function flushMessage(){
     var html = `<p class="notice">メッセージを送信しました。</p>`
     $('.notification').append(html)
-    $('.notice').fadeIn(200).fadeOut(2000)
+    $('.notice').fadeIn(200)
     setTimeout(function(){
       $('.notice').remove()
     },2000)
@@ -52,6 +52,5 @@ $(function(){
     .fail(function(){
       alert('メッセージを入力してください');
     })
-    return false;
   })
 })
