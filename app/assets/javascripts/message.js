@@ -3,9 +3,9 @@ $(function(){
     var html = `<p class="notice">メッセージを送信しました。</p>`
     $('.notification').append(html)
     $('.notice').fadeIn(200)
-    setTimeout(function(){
-      $('.notice').remove()
-    },2000)
+    $('.notice').delay(1500).queue(function() {
+      this.remove();
+    })
   }
 
   function buildHTML(message){
