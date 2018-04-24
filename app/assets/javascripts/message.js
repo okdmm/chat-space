@@ -47,7 +47,7 @@ $(function(){
       $('#message_content').val('')
       $('#message_image').val('')
       $('.form__submit').prop('disabled',false)
-      $('.chat-main__body').animate({ scrollTop:$('.chat-main__message').last().offset().top + "98px"})
+      $('.chat-main__body').animate({ scrollTop: $('.chat-main__body')[0].scrollHeight})
     })
     .fail(function(){
       alert('メッセージを入力してください');
