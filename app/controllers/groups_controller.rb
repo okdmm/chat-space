@@ -2,6 +2,11 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [:edit, :update]
 
   def index
+    @users = User.where("name like(?)", "#{params[:keyword]}%").where.not(id: current_user.id)
+    respond_to do |format|
+      format.json
+      format.html
+    end
   end
 
   def new
