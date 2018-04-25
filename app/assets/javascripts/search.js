@@ -7,8 +7,8 @@ $(function(){
     $('#user-search-result').append(html)
   }
 
-  function appendNoUser(remark ){
-    var html = `<p class="chat-group-user__name">${ remark }</p>`  
+  function appendNoUser(){
+    var html = `<p class="chat-group-user__name">一致しませんでした。</p>`  
     $('#user__name-result').append(html)
   }
 
@@ -40,7 +40,7 @@ $(function(){
         })
       }
       else {
-        appendNoUser('一致なし')
+        appendNoUser
       }
     })
     .fail(function(){
