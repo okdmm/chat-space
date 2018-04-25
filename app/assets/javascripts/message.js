@@ -13,7 +13,7 @@ $(function(){
     if (message.image.url){
     img = `<img class="message_image" src="${ message.image.url }" >`
     }
-    var html = `<div class="chat-main__message">
+    var html = `<div class="chat-main__message" msg-id = "${ message.id }" >
                   <div class="chat-main__message-name">
                     ${ message.name } 
                   </div>
@@ -53,4 +53,25 @@ $(function(){
       alert('メッセージを入力してください');
     })
   })
+
+  function getMsg() {
+    var newMsgId = $('.chat-main__message').last().attr('msg-id')
+    console.log(newMsgId)
+    var url = $('#new_message').attr('action')
+    $.ajax ({
+      type: 'GET',
+      url: url,
+      data: {id: newMsgId },
+      dataType: 'json'
+    })
+    .done(function(data){
+      if (data.length == 0) return false
+      data.forEach(function(msg) {
+        var html = buildHTML(msg)
+        $('.chat-main__body--messages-list').append(html)
+      })
+      $('.chat-main__body').animate({ scrollTop: $('.chat-main__body')[0].scrollHeight})
+    })
+  }
+  setInterval(getMsg, 1000)
 })
