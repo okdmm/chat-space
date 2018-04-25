@@ -51,9 +51,9 @@ $(function(){
   
   $('#user-search-result').on('click', '.user-search-add', function() {
     $('#user-search-field').val('');
-    var user_id = $(this).attr('data-user-id')
-    var user_name = $(this).attr('data-user-name')
-    appendGroupUser(user_name, user_id)
+    var userId = $(this).attr('data-user-id')
+    var userName = $(this).attr('data-user-name')
+    appendGroupUser(userName, userId)
     $(this).parent().remove()
   })
   $('#chat-group-form__users').on('click', '.js-remove-btn',function() {
