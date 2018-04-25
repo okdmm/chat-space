@@ -56,7 +56,6 @@ $(function(){
 
   function getMsg() {
     var newMsgId = $('.chat-main__message').last().attr('msg-id')
-    console.log(newMsgId)
     var url = $('#new_message').attr('action')
     $.ajax ({
       type: 'GET',
