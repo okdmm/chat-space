@@ -16,22 +16,25 @@
       top: 0;
       bottom: 0;
       color: $bg-font-color;
+      @include clearfix();
       &--name {
         font-size: 16px;
         font-weight: bold;
         margin: 0 20px;
         display: inline-block;
         position: relative;
+        float: left;
       }
       &--new-group {
-        margin: 0 0 0 150px;
-        display: inline-block;
+        margin: 0 5px 0 0;
+        float: right;
         i {
           color:$bg-font-color;
         }
       }
       &--edit-user {
-        display: inline-block;
+        margin: 0 5px 0 0;
+        float: right;
         i {
           color:$bg-font-color;
         }
