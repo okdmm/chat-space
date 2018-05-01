@@ -78,3 +78,5 @@ gem 'devise'
 # image-file-apploading tool
 gem 'carrierwave'
 gem 'mini_magick'
+# upload
+gem 'fog'
