@@ -80,3 +80,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 # upload
 gem 'fog'
+gem 'fog-aws'
